@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HK2UK Property 遷居｜專題講座 免費登記</title>
+
+<style>
+:root{
+  --bg:#F6F4F2;
+  --ink:#0D1320;
+  --muted:#556071;
+  --card:#FFFFFF;
+  --line:#E6E0DA;
+
+  --navy:#0B1730;
+  --navy2:#132A52;
+
+  --pink:#D8A5A5;
+  --pink2:#F4DCDC;
+
+  --shadow:0 22px 60px rgba(0,0,0,.12);
+  --shadow2:0 12px 30px rgba(0,0,0,.08);
+  --r:18px;
+  --r2:14px;
+  --max:1180px;
+
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang HK","Noto Sans TC","Helvetica Neue",Arial,sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:18px 16px 90px}
+
+nav{
+  position:sticky;top:0;z-index:30;
+  backdrop-filter:saturate(140%) blur(14px);
+  background:rgba(246,244,242,.82);
+  border-bottom:1px solid rgba(230,224,218,.7);
+}
+.navInner{max-width:var(--max);margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+  width:40px;height:40px;border-radius:12px;
+  border:1px solid var(--line);background:#fff;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.logo img{width:100%;height:100%;object-fit:contain;padding:6px}
+.brandTitle{line-height:1.2}
+.brandTitle strong{display:block;font-weight:950;font-size:13px}
+.brandTitle span{display:block;font-size:11px;color:var(--muted)}
+.navLinks{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.pill{
+  padding:10px 12px;border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;font-weight:900;font-size:12px;color:var(--navy);
+}
+.pill.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+.pill.pink{background:var(--pink);border-color:var(--pink);color:#fff}
+
+.hero{
+  margin-top:16px;
+  border-radius:28px;
+  background:
+    radial-gradient(900px 450px at 20% 0%, rgba(216,165,165,.35), transparent 60%),
+    radial-gradient(900px 450px at 90% 20%, rgba(19,42,82,.28), transparent 55%),
+    linear-gradient(135deg, #ffffff 0%, #ffffff 55%, rgba(244,220,220,.55) 100%);
+  border:1px solid rgba(230,224,218,.85);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+.heroGrid{
+  display:grid;grid-template-columns:1.35fr .65fr;gap:0;
+}
+@media(max-width:980px){.heroGrid{grid-template-columns:1fr}}
+.heroLeft{padding:28px 26px}
+.heroRight{
+  padding:24px 22px;
+  background:linear-gradient(180deg, rgba(11,23,48,.95), rgba(19,42,82,.95));
+  color:#fff;
+}
+.kicker{
+  display:inline-flex;gap:10px;align-items:center;
+  padding:8px 12px;border-radius:999px;
+  border:1px solid rgba(230,224,218,.9);
+  background:rgba(255,255,255,.72);
+  font-size:12px;font-weight:900;color:var(--navy);
+}
+.kicker b{color:#7a4f4f}
+h1{
+  margin:14px 0 10px;
+  font-size:38px;line-height:1.05;font-weight:980;letter-spacing:-.6px;
+  color:var(--navy);
+}
+@media(max-width:520px){h1{font-size:32px}}
+.lead{
+  margin:0;
+  font-size:15px;line-height:1.85;color:#273045;
+  max-width:54ch;
+}
+.heroChips{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+.chip{
+  padding:10px 12px;border-radius:999px;
+  background:#fff;border:1px solid var(--line);
+  font-size:12px;font-weight:900;color:var(--muted);
+}
+.ctaRow{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  padding:13px 18px;border-radius:999px;
+  border:0;cursor:pointer;font-weight:950;
+}
+.btnNavy{background:var(--navy);color:#fff}
+.btnGhost{background:transparent;border:1px solid rgba(11,23,48,.18);color:var(--navy)}
+/* Right panel */
+.panelTitle{margin:0;font-size:14px;font-weight:950;opacity:.92}
+.panelBig{margin:10px 0 0;font-size:20px;font-weight:980;line-height:1.25}
+.panelSmall{margin:10px 0 0;font-size:12px;opacity:.88;line-height:1.7}
+.panelBox{
+  margin-top:14px;padding:14px;border-radius:16px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+}
+.panelBox strong{display:block}
+.panelBox span{display:block;margin-top:4px;font-size:12px;opacity:.88;line-height:1.6}
+.panelBtn{
+  margin-top:14px;width:100%;
+  padding:12px;border-radius:999px;
+  background:var(--pink);border:0;color:#fff;font-weight:980;
+}
+
+/* Sections */
+.section{margin-top:22px}
+.secHead{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  margin-bottom:10px;
+}
+.secHead h2{margin:0;font-size:22px;font-weight:980;color:var(--navy)}
+.secHead p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  box-shadow:var(--shadow2);
+  padding:22px;
+}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.twoCol{grid-template-columns:1fr}}
+.block{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+  background:linear-gradient(135deg,#fff 0%, #fff 70%, rgba(244,220,220,.55) 100%);
+}
+.block.navy{
+  background:linear-gradient(135deg, rgba(11,23,48,.94) 0%, rgba(19,42,82,.94) 100%);
+  border-color:rgba(255,255,255,.12);
+  color:#fff;
+}
+.block h3{margin:0 0 6px;font-size:18px;font-weight:980}
+.meta{font-size:13px;color:var(--muted);line-height:1.6}
+.block.navy .meta{color:rgba(255,255,255,.78)}
+ul{margin:10px 0 0;padding-left:18px;line-height:1.85}
+.block.navy ul{color:rgba(255,255,255,.92)}
+/* Topics */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.topic{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:14px;
+  background:#fff;
+}
+.topic strong{display:block;font-size:14px;color:#1a2742}
+.topic span{display:block;margin-top:4px;font-size:12px;color:var(--muted);line-height:1.5}
+
+/* Speakers */
+.speakers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px}
+@media(max-width:1000px){.speakers{grid-template-columns:1fr}}
+.speaker{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px;
+  background:linear-gradient(135deg,#fff 0%,#fff 65%, rgba(244,220,220,.65) 100%);
+}
+.sTop{display:flex;gap:12px;align-items:center}
+.avatar{
+  width:56px;height:56px;border-radius:18px;overflow:hidden;
+  border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;
+}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.speaker h4{margin:0;font-size:15px;font-weight:980;color:var(--navy)}
+.speaker p{margin:6px 0 0;font-size:13px;line-height:1.65;color:#2d3447}
+details{
+  margin-top:10px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--bg);
+  padding:12px;
+}
+summary{cursor:pointer;font-weight:950;color:var(--navy)}
+
+/* Form */
+form{margin-top:4px}
+label{display:block;margin-top:14px;font-weight:950;color:#182033}
+.req{color:#B00020;margin-left:4px}
+input,select{
+  width:100%;margin-top:8px;padding:12px;border-radius:12px;border:1px solid var(--line);font-size:14px;
+  background:#fff;
+}
+.checkGroup{
+  margin-top:10px;border:1px solid var(--line);border-radius:16px;padding:10px;background:#fff;
+}
+.check{display:flex;gap:10px;align-items:flex-start;padding:10px;border-radius:12px}
+.check:hover{background:rgba(246,244,242,.9)}
+.check input{width:18px;height:18px;margin-top:2px;accent-color:#B87E7E}
+.ct{margin:0;font-weight:950}
+.cs{margin-top:4px;font-size:12px;color:var(--muted);line-height:1.5}
+.submit{
+  margin-top:18px;width:100%;padding:15px;border-radius:999px;background:var(--navy);color:#fff;font-weight:980;border:0;
+}
+.note{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.7}
+.footer{margin-top:22px;text-align:center;font-size:12px;color:var(--muted);line-height:1.7}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="navInner">
+    <div class="brand">
+      <div class="logo"><img src="logo.PNG" alt="HK2UK Property" onerror="this.style.display='none'"></div>
+      <div class="brandTitle">
+        <strong>HK2UK Property 遷居｜專題講座 免費登記</strong>
+        <span>UK Property Made Simple. One trusted team for every step.</span>
+      </div>
+    </div>
+    <div class="navLinks">
+      <a class="pill" href="#impex">IMPEX 主題</a>
+      <a class="pill" href="#invest">投資講座</a>
+      <a class="pill" href="#speakers">講者</a>
+      <a class="pill primary" href="#register">立即登記</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="heroGrid">
+      <div class="heroLeft">
+        <div class="kicker"><b>2026</b> 香港四月英國物業分享</div>
+        <h1>
+          英國置業專題 ×<br>
+          投資取向分享
+        </h1>
+        <p class="lead">
+          今年四月，HK2UK Property 遷居將於香港舉行多場專題講座：
+          <strong>IMPEX 展覽期間分享（18–19/4）</strong> 以及
+          <strong>投資專題講座（25/4｜Supported Living House）</strong>。
+          我們同時邀請 <strong>英國註冊會計師</strong> 與 <strong>註冊律師</strong>，提供稅務與法律重點分享。
+        </p>
+
+        <div class="heroChips">
+          <span class="chip">IMPEX：18–19 / 4 / 2026</span>
+          <span class="chip">HKCEC：Hall 5F-G</span>
+          <span class="chip">投資講座：25 / 4 / 2026</span>
+          <span class="chip">Marco Polo Hongkong Hotel</span>
+        </div>
+
+        <div class="ctaRow">
+          <button class="btn btnNavy" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">立即登記</button>
+          <button class="btn btnGhost" onclick="document.getElementById('impex').scrollIntoView({behavior:'smooth'})">查看 IMPEX 主題</button>
+        </div>
+      </div>
+
+      <div class="heroRight">
+        <p class="panelTitle">活動重點（清晰分兩類）</p>
+        <p class="panelBig">A｜IMPEX：適合移居／自住置業人士</p>
+        <div class="panelBox">
+          <strong>18–19 / 4 / 2026</strong>
+          <span>香港會議展覽中心 HKCEC｜Hall 5F-G</span>
+          <span>地區選擇・校網現實・新盤 vs 二手・翻新成本・法律與稅務（含 IHT）</span>
+        </div>
+
+        <p class="panelBig" style="margin-top:14px">B｜投資講座：Supported Living 專題</p>
+        <div class="panelBox">
+          <strong>25 / 4 / 2026｜1:30–4:00 PM</strong>
+          <span>Marco Polo Hongkong Hotel, Tsim Sha Tsui</span>
+          <span>什麼是 Supported Living・如何投資・如何做到穩健可預期・零日常管理煩惱</span>
+        </div>
+
+        <button class="panelBtn" onclick="document.getElementById('register').scrollIntoView({behavior:'smooth'})">免費登記</button>
+        <p class="panelSmall">提交後將顯示「登記成功」頁面，並由團隊跟進活動安排。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW / WHY -->
+  <section class="section">
+    <div class="secHead">
+      <h2>為什麼值得參加？</h2>
+      <p>以顧問角度，建立可理解、可判斷的英國置業框架</p>
+    </div>
+
+    <div class="card">
+      <div class="twoCol">
+        <div class="block">
+          <h3>資訊太多，最缺的是「框架」</h3>
+          <div class="meta">網上資訊零散，難以判斷真假與是否適用香港人士。</div>
+          <ul>
+            <li>市場由升值導向轉向風險與結構理解</li>
+            <li>置業涉及法律、稅務、建築結構與流程</li>
+            <li>單靠「聽人講」容易買錯地區／買錯物業類型</li>
+          </ul>
+        </div>
+        <div class="block navy">
+          <h3>你會帶走的重點</h3>
+          <div class="meta">以實務經驗＋專業人士角度，幫你更有把握做決定。</div>
+          <ul>
+            <li>清晰比較不同英國物業模式與風險來源</li>
+            <li>理解稅務（含遺產稅）與法律流程重點</li>
+            <li>投資講座：深入掌握 Supported Living 的投資與穩健機制</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPEX -->
+  <section class="section" id="impex">
+    <div class="secHead">
+      <h2>IMPEX 展覽期間分享｜主題一覽</h2>
+      <p>18–19 / 4 / 2026｜HKCEC Hall 5F-G</p>
+    </div>
+
+    <div class="card">
+      <p style="margin:0;color:#2d3447;line-height:1.8">
+        內容以「英國置業準備」為主軸，適合準備移居、為家庭自住置業或希望了解英國市場的參加者，
+        以清晰框架拆解地區選擇、校網現實、新盤與二手比較、翻新成本，以及法律與稅務要點。
+      </p>
+
+      <div class="grid">
+        <div class="topic"><strong>英國區域與校網策略精選</strong><span>UK Location & School Catchment Selection</span></div>
+        <div class="topic"><strong>英國物業選擇全覽</strong><span>UK Property Options Overview</span></div>
+        <div class="topic"><strong>英國物業結構與建築基礎</strong><span>Property Construction & Building Structure</span></div>
+        <div class="topic"><strong>新盤與二手物業比較</strong><span>New Build vs Second-Hand Properties</span></div>
+        <div class="topic"><strong>二手物業翻新與改建成本概覽</strong><span>Renovation & Refurbishment Cost Insights</span></div>
+        <div class="topic"><strong>英國物業法律與合規重點</strong><span>UK Property Legal & Compliance Essentials</span></div>
+        <div class="topic"><strong>英國稅務概覽（包括遺產稅）</strong><span>UK Tax Overview incl. Inheritance Tax</span></div>
+        <div class="topic"><strong>Supported Living 模式介紹（簡介）</strong><span>Intro to Supported Living (overview)</span></div>
+      </div>
+
+      <p style="margin-top:12px;color:var(--muted);font-size:12px;line-height:1.7">
+        註：IMPEX 內容會涵蓋 Supported Living 的基本概念，但「投資實務流程與穩健機制」會在 25/4 投資專題講座中深入講解。
+      </p>
+    </div>
+  </section>
+
+  <!-- INVEST -->
+  <section class="section" id="invest">
+    <div class="secHead">
+      <h2>投資專題講座｜Supported Living House（深度）</h2>
+      <p>25 / 4 / 2026｜Marco Polo Hongkong Hotel｜1:30–4:00 PM</p>
+    </div>
+
+    <div class="card">
+      <div class="block" style="background:linear-gradient(135deg,#fff 0%,#fff 60%, rgba(244,220,220,.65) 100%);">
+        <h3 style="margin:0 0 8px">2026 英國物業專家投資取向 — Supported Living House</h3>
+        <div class="meta">
+          <strong>日期：</strong>25 / 4 / 2026（星期六）｜
+          <strong>時間：</strong>1:30–4:00 PM｜
+          <strong>地點：</strong>Marco Polo Hongkong Hotel, Tsim Sha Tsui
+        </div>
+        <ul>
+          <li>什麼是 Supported Living House 及其市場需求背景</li>
+          <li>如何投資 Supported Living（由選擇、購入到租約安排的實務流程）</li>
+          <li>如何做到更穩健、可預期的現金流</li>
+          <li>零日常管理煩惱：一般由專業營運機構負責日常管理</li>
+          <li>稅務與法律重點（由英國註冊會計師及律師分享）</li>
+        </ul>
+        <p style="margin:10px 0 0;color:#2d3447;line-height:1.8;font-size:13px">
+          <strong>適合對象：</strong>希望配置英國物業資產、追求較穩定現金流，同時不希望處理日常租務管理的投資者。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKERS -->
+  <section class="section" id="speakers">
+    <div class="secHead">
+      <h2>講者與特別嘉賓</h2>
+      <p>點擊展開查看更多資料（可稍後再補充 Profile）</p>
+    </div>
+
+    <div class="card">
+      <div class="speakers">
+        <div class="speaker">
+          <div class="sTop">
+            <div class="avatar">
+              <img src="Matthew.PNG" alt="Matthew" onerror="this.style.display='none'">
+            </div>
+            <div>
+              <h4>Matthew｜HK2UK Property</h4>
+              <p style="margin:4px 0 0;color:var(--muted);font-size:12px">主講｜英國物業實務與市場框架</p>
+            </div>
+          </div>
+          <details>
+            <summary>簡介</summary>
+            <p>專注協助香港人士了解英國置業與投資路徑，以可落地的實務角度提供清晰建議。</p>
+          </details>
+        </div>
+
+        <div class="speaker">
+          <div class="sTop">
+            <div class="avatar"></div>
+            <div>
+              <h4>Oscar Ip｜UK Chartered Accountant</h4>
+              <p style="margin:4px 0 0;color:var(--muted);font-size:12px">特別嘉賓｜稅務（含 IHT）</p>
+            </div>
+          </div>
+          <details>
+            <summary>簡介</summary>
+            <p>英國註冊會計師，分享英國置業與投資相關稅務重點（包括遺產稅）。</p>
+          </details>
+        </div>
+
+        <div class="speaker">
+          <div class="sTop">
+            <div class="avatar"></div>
+            <div>
+              <h4>Amie Tsang｜Registered Solicitor</h4>
+              <p style="margin:4px 0 0;color:var(--muted);font-size:12px">特別嘉賓｜法律與交易流程</p>
+            </div>
+          </div>
+          <details>
+            <summary>簡介</summary>
+            <p>註冊律師，講解英國物業交易流程、法律重點及合規風險。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION -->
+  <section class="section" id="register">
+    <div class="secHead">
+      <h2>免費登記</h2>
+      <p>問題結構完全跟 Google Form，提交後將顯示「登記成功」頁面</p>
+    </div>
+
+    <div class="card">
+      <form action="https://formsubmit.co/info@hk2ukproperty.com" method="POST">
+        <input type="hidden" name="_subject" value="HK2UK Property Seminar｜New Registration">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="thank-you.html">
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- Extra: choose which event(s) -->
+        <label>你想參加邊個講座？（可選多項）</label>
+        <div class="checkGroup">
+          <label class="check"><input type="checkbox" name="event_choice[]" value="IMPEX (18–19/4)"><div class="ct">IMPEX 展覽期間分享（18–19 / 4 / 2026）</div></label>
+          <label class="check"><input type="checkbox" name="event_choice[]" value="Investment Seminar (25/4)"><div class="ct">投資專題講座（25 / 4 / 2026｜Supported Living）</div></label>
+        </div>
+
+        <!-- Q1 -->
+        <label>姓名<span class="req">*</span></label>
+        <input name="name" required>
+
+        <!-- Q2 -->
+        <label>電郵<span class="req">*</span></label>
+        <input type="email" name="email" required>
+
+        <!-- Q3 -->
+        <label>電話<span class="req">*</span></label>
+        <input name="phone" required>
+
+        <!-- Q4 -->
+        <label>你有興趣的英國地區（可多選）</label>
+        <div class="checkGroup">
+          <label class="check"><input type="checkbox" name="region[]" value="Manchester"><div><div class="ct">Manchester</div></div></label>
+          <label class="check"><input type="checkbox" name="region[]" value="Liverpool"><div><div class="ct">Liverpool</div></div></label>
+          <label class="check"><input type="checkbox" name="region[]" value="Birmingham"><div><div class="ct">Birmingham</div></div></label>
+          <label class="check"><input type="checkbox" name="region[]" value="Cambridge"><div><div class="ct">Cambridge</div></div></label>
+          <label class="check"><input type="checkbox" name="region[]" value="Others"><div><div class="ct">其他 Others</div></div></label>
+        </div>
+
+        <!-- Q5 -->
+        <label>預算範圍（單選）<span class="req">*</span></label>
+        <select name="budget" required>
+          <option value="">請選擇</option>
+          <option>£150k 以下</option>
+          <option>£150k – £250k</option>
+          <option>£250k – £350k</option>
+          <option>£350k – £500k</option>
+          <option>£500k 以上</option>
+        </select>
+
+        <!-- Q6 (MUST HAVE) -->
+        <label>請選擇您有興趣的範疇<span class="req">*</span><br><span class="cs">What are you interested in?</span></label>
+        <div class="checkGroup">
+          <label class="check"><input type="checkbox" name="interest[]" value="Buying for Self Live" required><div><div class="ct">自住買樓</div><div class="cs">Buying for Self Live</div></div></label>
+          <label class="check"><input type="checkbox" name="interest[]" value="Buying for Investment"><div><div class="ct">投資買樓</div><div class="cs">Buying for Investment</div></div></label>
+          <label class="check"><input type="checkbox" name="interest[]" value="Letting Out Your Property (Landlord)"><div><div class="ct">放租（業主）</div><div class="cs">Letting Out Your Property (Landlord)</div></div></label>
+          <label class="check"><input type="checkbox" name="interest[]" value="Renting a Property (Tenant)"><div><div class="ct">租樓（租客）</div><div class="cs">Renting a Property (Tenant)</div></div></label>
+          <label class="check"><input type="checkbox" name="interest[]" value="UK New Build Projects"><div><div class="ct">英國新樓盤</div><div class="cs">UK New Build Projects</div></div></label>
+          <label class="check"><input type="checkbox" name="interest[]" value="UK Second-Hand Properties"><div><div class="ct">英國二手樓盤</div><div class="cs">UK Second-Hand Properties</div></div></label>
+          <label class="check"><input type="checkbox" name="interest[]" value="Others"><div><div class="ct">其他</div><div class="cs">Others</div></div></label>
+        </div>
+
+        <p class="note">提示：第 6 題為必填（可選多項），請至少選擇一項。</p>
+
+        <!-- Q7 -->
+        <label>你是否有計劃移居英國？<span class="req">*</span><br><span class="cs">Are you planning to relocate to the UK?</span></label>
+        <div class="checkGroup">
+          <label class="check"><input type="radio" name="relocation" value="Yes, within 12 months" required><div><div class="ct">有，12個月內</div><div class="cs">Yes, within 12 months</div></div></label>
+          <label class="check"><input type="radio" name="relocation" value="Maybe in 1–3 years"><div><div class="ct">有可能，1–3年內</div><div class="cs">Maybe in 1–3 years</div></div></label>
+          <label class="check"><input type="radio" name="relocation" value="No, mainly for investment"><div><div class="ct">沒有，只作投資用途</div><div class="cs">No, mainly for investment</div></div></label>
+        </div>
+
+        <button class="submit" type="submit">提交登記</button>
+
+        <p class="note">
+          提交後將顯示「登記成功」頁面。我們亦會於活動前以電郵與你聯絡，提供講座詳情及安排。
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <div class="footer">
+    本頁內容僅供資訊分享，不構成任何投資建議。<br>
+    © HK2UK Property 遷居
+  </div>
+
+</div>
+</body>
+</html>
